@@ -386,6 +386,7 @@ export type AgentLlmConfig = {
    * If no token is received within this time, the request is aborted.
    * Set to 0 to disable (never timeout).
    * Default: 60 seconds.
+   * [CLS] 如果使用local llm, 60s很容易timeout變成fallback model
    */
   idleTimeoutSeconds?: number;
 };
